@@ -8,7 +8,7 @@ public class SwingSample {
 	public static void main(String[] args) {
 		var mainFrame = new MainFrame("SwingSample");
 		var centerPanel = new CenterPanel();
-		mainFrame.addPanel(centerPanel, BorderLayout.CENTER);
+		mainFrame.addComponent(centerPanel, BorderLayout.CENTER);
 		mainFrame.show();
 	}
 

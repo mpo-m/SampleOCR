@@ -4,6 +4,7 @@ import java.awt.Container;
 import java.awt.GraphicsEnvironment;
 import java.awt.Rectangle;
 
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
@@ -25,8 +26,8 @@ public class MainFrame {
 		frame.setVisible(true);
 	}
 
-	public void addPanel(JPanel panel, String borderLayout) {
-		contentPane.add(panel, borderLayout);
+	public void addComponent(JComponent component, String borderLayout) {
+		contentPane.add(component, borderLayout);
 	}
 
 }

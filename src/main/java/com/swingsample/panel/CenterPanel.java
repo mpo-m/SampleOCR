@@ -35,10 +35,7 @@ public class CenterPanel extends JPanel {
 		this.inputPath = new JTextField("画像のパスを入力", 25);
 		this.loadPath = new JButton("読込");
 		var header = new JPanel();
-		loadPath.addActionListener(e -> {
-			String text = parseImage(inputPath.getText());
-			textArea.setText(text);
-		});
+		loadPath.addActionListener(e -> textArea.setText(parseImage(inputPath.getText())));
 		header.add(inputPath);
 		header.add(loadPath);
 		add(header, BorderLayout.NORTH);
@@ -82,7 +79,6 @@ public class CenterPanel extends JPanel {
 			int result = JOptionPane.showConfirmDialog(this, accept);
 			if (result == JOptionPane.YES_OPTION) {
 				textArea.setText("");
-				return;
 			}
 		});
 		buttonPanel.add(clearText);
