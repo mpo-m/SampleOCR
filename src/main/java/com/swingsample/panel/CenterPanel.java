@@ -1,8 +1,8 @@
 package com.swingsample.panel;
 
-import java.awt.image.BufferedImage;
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -32,7 +32,7 @@ public class CenterPanel extends JPanel {
 	}
 
 	private void setHeader() {
-		this.inputPath = new JTextField("画像のパスを入力", 25);
+		this.inputPath = new JTextField(25);
 		this.loadPath = new JButton("読込");
 		var header = new JPanel();
 		loadPath.addActionListener(e -> textArea.setText(parseImage(inputPath.getText())));
@@ -49,8 +49,8 @@ public class CenterPanel extends JPanel {
 		try {
 			BufferedImage img = ImageIO.read(file);
 			ITesseract tesseract = new Tesseract();
-			tesseract.setDatapath("");
-			tesseract.setLanguage("jpn");
+			tesseract.setDatapath("src/main/resources/tessdata");
+			tesseract.setLanguage("eng");
 			return tesseract.doOCR(img);
 		} catch (IOException e) {
 			return "画像ファイル作成失敗";
