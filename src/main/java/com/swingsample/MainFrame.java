@@ -1,12 +1,9 @@
 package com.swingsample;
 
 import java.awt.Container;
-import java.awt.GraphicsEnvironment;
-import java.awt.Rectangle;
 
 import javax.swing.JComponent;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 public class MainFrame {
